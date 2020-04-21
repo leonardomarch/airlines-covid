@@ -1,0 +1,103 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/* Start your base/mobile styles here */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 1em;
+    font-family: Verdana, sans-serif;
+}
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        max-width: 400px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container img {
+        width: 100%
+    }
+
+    .background {
+        opacity: 1;
+        width: 90%;
+        display: inline;
+        z-index: 0;
+        position: absolute;
+    }
+
+    .logos {
+        width: 50%;
+        height: 20px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    button.st3 {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        z-index: 1;
+        padding: 5px;
+        margin: 3px;
+        border-radius: 20px;
+    }
+
+    button.st5 {
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        padding: 5px;
+        margin: 3px;
+        border-radius: 20px;
+    }
+
+    button.st4 {
+        width: 40px;
+        height: 40px;
+        background-color: green;
+        padding: 5px;
+        margin: 3px;
+        border-radius: 20px;
+    }
+}
+
+/* Smartphones (portrait) ---------- */
+@media screen and (max-width: 320px) {
+    /* styles */
+}
+
+/* Smartphones (landscape) ---------- */
+@media screen and (min-width: 321px) {
+    /* styles */
+}
+
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* styles */
+}
+
+/* Tablets, iPads (portrait) ---------- */
+@media screen and (min-width: 768px) {
+    /* styles */
+}
+
+/* Tablets, iPads (landscape) ---------- */
+@media screen and (min-width: 1024px) {
+    /* styles */
+}
+
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px) {
+    /* styles */
+}
+
+/* Large screens ---------- */
+@media screen and (min-width: 1824px) {
+    /* styles */
+}
