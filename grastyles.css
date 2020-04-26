@@ -1,72 +1,35 @@
-.st0 {
-    fill: none;
-    stroke: #000000;
-    stroke-miterlimit: 10;
-}
+  .st0 {
+      fill: none;
+      stroke: 000000;
+      stroke-miterlimit: 1;
+  }
 
-.st1 {
-    font-family: 'MyriadPro-Regular';
-}
+  .st1 {
+      font-family: 'MyriadPro-Regular';
+  }
 
-.st2 {
-    font-size: 14.4009px;
-}
+  .st2 {
+      font-size: 9.2812px;
+  }
 
-.st3 {
-    fill: none;
-    stroke: #808080;
-    stroke-width: .5;
-    stroke-linecap: round;
-    stroke-miterlimit: 10;
-}
+  .st3 {
+      fill: none;
+      stroke: #DFDFDF;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-miterlimit: 10;
+  }
 
-.st4 {
-    fill: none;
-    stroke: #DFDFDF;
-    stroke-width: .5;
-    stroke-linecap: round;
-    stroke-miterlimit: 10;
-}
+  .st4 {
+      stroke-miterlimit: 1;
+      width: 1px;
+      height: 1px;
+  }
 
-.st3.active {
-    stroke: red;
-    stroke-width: 2;
-}
-
-.st4.active {
-    stroke: green;
-    stroke-width: 2;
-}
-
-.st5.active {
-    stroke: blue;
-    stroke-width: 2;
-}
-
-.st5 {
-    fill: none;
-    stroke: #000000;
-    stroke-width: .5;
-    stroke-linecap: round;
-    stroke-miterlimit: 10;
-}
-
-.st6 {
-    fill: #808080;
-    stroke: #000000;
-    stroke-width: 0.5;
-    stroke-miterlimit: 10;
-}
-
-.st7 {
-    fill: #DFDFDF;
-    stroke: #000000;
-    stroke-width: 0.5;
-    stroke-miterlimit: 10;
-}
-
-.st8 {
-    stroke: #000000;
-    stroke-width: 0.5;
-    stroke-miterlimit: 10;
-}
+  .st4.color {
+      fill: red;
+      stroke-miterlimit: 3;
+      width: 2px;
+      height: 2px;
+      border-radius: 2px;
+  }

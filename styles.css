@@ -31,40 +31,67 @@ html, body {
         position: absolute;
     }
 
-    .logos {
-        width: 50%;
+    .slidecontainer {
         height: 20px;
+        width: 100%;
+        margin: auto 0;
+    }
+
+    .datepicker {
         margin: 0 auto;
-        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
     }
 
-    button.st3 {
-        width: 40px;
-        height: 40px;
+    .highlight {
         background-color: red;
-        z-index: 1;
-        padding: 5px;
-        margin: 3px;
-        border-radius: 20px;
+        stroke-miterlimit: 1;
+        width: 5px;
+        height: 5px;
     }
 
-    button.st5 {
-        width: 40px;
-        height: 40px;
-        background-color: blue;
-        padding: 5px;
-        margin: 3px;
-        border-radius: 20px;
+    .input {
+        opacity: 0;
     }
 
-    button.st4 {
-        width: 40px;
-        height: 40px;
-        background-color: green;
-        padding: 5px;
-        margin: 3px;
-        border-radius: 20px;
+    svg {
+        transform: scale(10);
+        overflow-x: hidden;
+        left: 10px
     }
+
+    .graph {
+        overflow: hidden;
+        width: 100%;
+        border-left: 1px dotted grey;
+        border-right: 1px dotted grey;
+        margin: 0 auto;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 9px;
+        height: 9px;
+        border-radius: 5px;
+        background: green;
+        cursor: pointer;
+    }
+
+    /*Slider CSS code courtey of w3schools.com*/
 }
 
 /* Smartphones (portrait) ---------- */
