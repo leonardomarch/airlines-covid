@@ -1,4 +1,4 @@
-$("body").on("click", "button", function (e) {
+$("body").on("click", "buton", function (e) {
 
 	const airline = e.target;
 	const airlineid = $(airline).val();
@@ -34,7 +34,7 @@ $("body").on("change", ".slider", function (e) {
 	$(`.invisible.${finalDate1}`).removeClass("invisible");
 
 });
-
+//code to highlight data points. //
 $("body").on("click", ".graph", function (e) {
 	const select = e.target;
 	const select2 = select.id
@@ -42,6 +42,36 @@ $("body").on("click", ".graph", function (e) {
 	$(".st4.color").removeClass("color");
 	$(`.st4#${select2}`).addClass("color");
 
-
 	console.log(select2)
+
+});
+
+
+
+$("button").click(function (e) {
+	const cliqued = e.target
+	const cliquedId = cliqued.id
+
+	var yesterDate = $("#yesterday").text();
+	var toDate = $("#today").text();
+	var tomorDate = $("#tomorrow").text();
+
+	if (cliquedId === "yesterday") {
+		console.log(yesterDate)
+	}
+	if (cliquedId === "today") {
+		console.log(toDate)
+	}
+	if (cliquedId === "tomorrow") {
+		console.log(tomorDate)
+
+		newyesterDate = Number(yesterDate) + Number(1);
+		newtoDate = Number(toDate) + Number(1);
+		newtomorDate = Number(tomorDate) + Number(1);
+	}
+
+	$("#yesterday").text(newyesterDate)
+	$("#today").text(newtoDate)
+	$("#tomorrow").text(newtomorDate)
+
 });

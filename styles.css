@@ -42,6 +42,7 @@ html, body {
         width: 100%;
         padding: 10px;
         text-align: center;
+        margin: 20px;
     }
 
     .highlight {
@@ -89,6 +90,12 @@ html, body {
         border-radius: 5px;
         background: green;
         cursor: pointer;
+    }
+
+    #yesterday, #today, #tomorrow {
+        padding: 10px;
+        margin: 5px;
+        background-color: #BDCEDA
     }
 
     /*Slider CSS code courtey of w3schools.com*/
