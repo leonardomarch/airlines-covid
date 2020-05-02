@@ -28,13 +28,6 @@ html, body {
         width: 100%
     }
 
-    .slidecontainer {
-        height: 20px;
-        width: 100%;
-        margin: auto 0;
-        display: none;
-    }
-
     .datepicker {
         margin: 0 auto;
         width: 100%;
@@ -87,7 +80,8 @@ html, body {
         display: inline;
         padding-left: 1px;
         padding-right: 1px;
-        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
     }
 
     .container span {
@@ -96,6 +90,8 @@ html, body {
         font-size: 1.35em;
         font-weight: bolder;
         text-align: left;
+        vertical-align: middle;
+        line-height: 30px;
     }
 
     .container #stockoutput {
@@ -121,6 +117,7 @@ html, body {
         margin-top: 25px;
     }
 
+    /* To be Deleted?
     .slider {
         -webkit-appearance: none;
         appearance: none;
@@ -149,17 +146,120 @@ html, body {
         background-color: #BDCEDA
     }
 
-    /*Slider CSS code courtey of w3schools.com*/
-}
+    .slidecontainer {
+        height: 20px;
+        width: 100%;
+        margin: auto 0;
+        display: none;
+    }
 
-/* Smartphones (portrait) ---------- */
-@media screen and (max-width: 320px) {
-    /* styles */
+    Slider CSS code courtey of w3schools.com */
 }
 
 /* Smartphones (landscape) ---------- */
-@media screen and (min-width: 321px) {
-    /* styles */
+@media screen and (min-width: 481px) {
+    .container {
+        max-width: 500px;
+        min-width: 320px;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .container img {
+        width: 110%;
+        margin: 0 auto;
+    }
+
+    svg {
+        transform: scale(1.5);
+        left: 0px;
+    }
+
+    .text {
+        font-size: .85em;
+        line-height: 1.4;
+    }
+
+    /* Interactive: Graph and output */
+    .graph {
+        overflow-x: scroll;
+        width: 100%;
+        margin: 0 auto;
+        height: 200px;
+        margin-top: 25px;
+    }
+
+    .logos {
+        height: 35px;
+        border-top: 1px dotted #BDCEDA;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin: 0 auto;
+    }
+
+    .logos img {
+        width: 15%;
+        display: inline;
+    }
+
+    .logos p {}
+
+    .container.output {
+        margin: 0 auto;
+        border-top: 1px dotted #BDCEDA;
+        margin-top: 10px;
+        height: 35px;
+        width: 100%;
+    }
+
+    .container p {
+        font-size: .85em;
+        display: inline;
+        padding-left: 1px;
+        padding-right: 1px;
+        vertical-align: middle;
+        line-height: 35px;
+    }
+
+    .container span {
+        width: 82px;
+        display: inline-block;
+        font-size: 1.35em;
+        font-weight: bolder;
+        text-align: left;
+        vertical-align: middle;
+        line-height: 30px;
+    }
+
+    .container #stockoutput {
+        margin-left: 7px;
+    }
+
+    .moreinfo {
+        border-top: 1px dotted #BDCEDA;
+        width: 100%;
+        border-bottom: 1px dotted #BDCEDA;
+        height: 35px;
+    }
+
+    .container #fareoutput {
+        padding-bottom: 12px;
+    }
+
+    /* Date Navigation */
+    .datepicker {
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    button {
+        height: 30px;
+        font-size: .8em;
+        background-color: #BDCEDA;
+    }
 }
 
 /* Tablets, iPads (portrait and landscape) ---------- */
