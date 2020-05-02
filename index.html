@@ -31,7 +31,7 @@
 
       <h1>title title title title </h1>
 
-      <h5>Violeta Nespolo and Leonardo March</h5>
+      <h5>by Violeta Nespolo and Leonardo March</h5>
 
       <div class="text">Keel spanker crack Jennys tea cup code of conduct Nelsons folly heave to gangplank lookout mizzen draught. Grapple gangplank lateen sail scurvy gally hands ho dance the hempen jig tender capstan. Snow case shot sloop nipper
         Plate Fleet hardtack square-rigged carouser clipper grapple.
@@ -40,18 +40,23 @@
         dead men tel.</div>
 
       <div class="container output">
-        <p>Coronavirus Cases:<span id="casesoutput"></p>
-        <p>Stock Price:<span id="stockoutput"></p>
-        <p>Airfare:<span id="fareoutput"></p>
-
+        <p id="casesoutput">COVID-19 Cases:<span></span></p>
       </div>
+      <div class="logos">
+        <p id="stockoutput"><img src="img/delta.png">:<span></span></p>
+        <p id="american"><img src="img/united.png">:<span></span></p>
+        <p id="delta"><img src="img/united.png">:<span></span></p>
+      </div>
+      <div class="moreinfo">
 
+        <p id="fareoutput">Airfare: <span></span></p>
+      </div>
       <div class="graph">
 
 
         <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-180 0 1077.88 407.69" style="enable-background:new 0 0 1077.88 407.69;" xml:space="preserve">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-180 -10 1077.88 407.69" style="enable-background:new 0 0 1077.88 407.69;" xml:space="preserve">
           <style type="text/css">
 
           </style>
@@ -287,7 +292,7 @@
               <g>
                 <rect x="889.08" y="78.46" class="st6" width="6" height="6" />
                 <g>
-                  <rect mydata:stock="THENAME1" mydata:fare="THENAME2" mydata:cases="THENAME3" x="259.64" y="360.63" class="st6" width="6" height="6" />
+                  <rect mydata:stock="45" mydata:fare="433" mydata:cases="122343" x="259.64" y="360.63" class="st6" width="6" height="6" />
                   <rect x="271.2" y="360.31" class="st6" width="6" height="6" />
                   <rect x="282.75" y="359.78" class="st6" width="6" height="6" />
                   <rect x="294.31" y="359.14" class="st6" width="6" height="6" />
@@ -360,48 +365,31 @@
 
       </div>
 
-
-
       <div class="datepicker">
+        <button id="before" value="02012020">&#8678;</button>
         <button id="yesterday" value="02012020">Feb 1</button>
         <button id="today" value="02012020">Feb 2</button>
         <button id="tomorrow" value="02032020">Feb 3</button>
-
-
-
-        <div class="input">
-          <p id="012020">fsdfasd1</p>
-          <p id="022020">fsdfasd2</p>
-          <p id="032020">fsdfasd3foto</p>
-        </div>
-
-        <div class="input2">
-          <div class="012020"><img src=""></div>
-          <div class="022020"><img src=""></div>
-          <div class="032020 invisible"><img src="img/sky.jpeg"></div>
-        </div>
-
-
-
-        <div class="slidecontainer">
-
-          <input type="range" min="1" max="90" value="0" class="slider" id="myRange">
-        </div>
-
-
-        <div class="text"></div>
-        <div class="graph2"></div>
-        <div class="text">Reality is one formless awareness.There is no such thing as an absolute objective reality in the theater of spacetime and causality and matter. Everyday reality is a notion. Cosmic consciousness is the immeasurable
-          potential
-          for all modes of knowing and experience in every sentient being. Awareness is the source of all constructs. The building blocks of the physical world called waves and particles are mathematical abstractions in consciousness. In every
-          act of
-          perception we convert quantum information into a three dimensional universe evolving in time. Thought creates subject/object split overshadowing the reality of the One Mind. Love is ultimate reality.</div>
+        <button id="next" value="02012020">&#8680;</button>
       </div>
-      <!-- the jQuery library. You need this to be able to use jQuery ($) -->
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <!-- Your javascript should be called here -->
-      <script src="main.js"></script>
+      <div class="slidecontainer">
+
+        <input type="range" min="1" max="90" value="0" class="slider" id="myRange">
+      </div>
+
+      <div class="text">Reality is one formless awareness.There is no such thing as an absolute objective reality in the theater of spacetime and causality and matter. Everyday reality is a notion. Cosmic consciousness is the immeasurable
+        potential
+        for all modes of knowing and experience in every sentient being. Awareness is the source of all constructs. The building blocks of the physical world called waves and particles are mathematical abstractions in consciousness. In every
+        act of
+        perception we convert quantum information into a three dimensional universe evolving in time. Thought creates subject/object split overshadowing the reality of the One Mind. Love is ultimate reality.</div>
+
+    </div>
+    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Your javascript should be called here -->
+    <script src="main.js"></script>
 
   </body>
 

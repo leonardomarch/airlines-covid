@@ -11,11 +11,9 @@ $("body").on("click", "svg rect", function (e) {
 	$("rect").removeClass("active")
 	$(this_rect).addClass("active");
 
-	$("#fareoutput").text(fare);
-	$("#stockoutput").text(stock);
-	$("#casesoutput").text(cases);
-
-	console.log(airfare + stock)
+	$("#fareoutput span").text(fare);
+	$("#stockoutput span").text(stock);
+	$("#casesoutput span").text(cases);
 
 });
 
