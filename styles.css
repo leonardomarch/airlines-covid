@@ -117,6 +117,78 @@ html, body {
         margin-top: 25px;
     }
 
+    /* vertical bars code*/
+    .cases {
+        border-top: 1px dotted #BDCEDA;
+        border-bottom: 1px dotted #BDCEDA;
+        width: 100%;
+    }
+
+    .visual.graph {
+        border: 1px dotted #BDCEDA;
+        width: 102%;
+        text-align: center;
+        align-items: flex-end;
+    }
+
+    .vertical.bars {
+        float: left;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    #stock1, #stock2, #stock3 {
+        width: 25%;
+        background-color: #BDCEDA;
+    }
+
+    #stock1 {
+        height: 100px;
+    }
+
+    #stock2 {
+        height: 28px;
+    }
+
+    #stock3 {
+        height: 80px;
+    }
+
+    .horizontal.bars {
+        float: right;
+        width: 33%;
+        border-left: 1px solid #BDCEDA;
+        height: 100%;
+    }
+
+    #airfare1, #airfare2, #airfare3, #airfare4, #airfare5 {
+        background-color: #BDCEDA;
+        height: 25px;
+        margin-top: 5px;
+        float: right;
+    }
+
+    #airfare1 {
+        width: 96px;
+    }
+
+    #airfare2 {
+        width: 90px;
+    }
+
+    #airfare3 {
+        width: 70px;
+    }
+
+    #airfare4 {
+        width: 70px;
+    }
+
+    #airfare5 {
+        width: 70px;
+    }
+
     /* To be Deleted?
     .slider {
         -webkit-appearance: none;
