@@ -1,6 +1,6 @@
 .st0 {
     fill: none;
-    stroke: #000000;
+    stroke: white;
     stroke-miterlimit: 10;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .st6 {
-    fill: #green;
+    fill: white;
     stroke-width: 0.5;
     stroke-miterlimit: 10;
     width: 4px;

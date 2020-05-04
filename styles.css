@@ -9,13 +9,14 @@ html, body {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 1em;
     font-family: Verdana, sans-serif;
+    background-color: black;
 }
 
 /* Smartphones (portrait and landscape) ---------- */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    h1 {}
-
-    h5 {}
+    h1, h5 {
+        color: white;
+    }
 
     .container {
         max-width: 400px;
@@ -38,7 +39,8 @@ html, body {
 
     button {
         height: 30px;
-        font-size: .7em
+        font-size: .7em;
+        color: white;
     }
 
     svg {
@@ -50,63 +52,11 @@ html, body {
         font-size: .8em;
         width: 90%;
         line-height: 1.3;
-    }
-
-    .logos {
-        height: 30px;
-        border-top: 1px dotted #BDCEDA;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        margin: 0 auto;
-    }
-
-    .logos img {
-        width: 12%;
-        display: inline;
-    }
-
-    .logos p {}
-
-    .container.output {
-        margin: 0 auto;
-        border-top: 1px dotted #BDCEDA;
-        margin-top: 10px;
-        height: 30px;
-        width: 100%;
-    }
-
-    .container p {
-        font-size: .75em;
-        display: inline;
-        padding-left: 1px;
-        padding-right: 1px;
-        vertical-align: middle;
-        line-height: 30px;
-    }
-
-    .container span {
-        width: 82px;
-        display: inline-block;
-        font-size: 1.35em;
-        font-weight: bolder;
-        text-align: left;
-        vertical-align: middle;
-        line-height: 30px;
+        color: white;
     }
 
     .container #stockoutput {
         margin-left: 7px;
-    }
-
-    .moreinfo {
-        border-top: 1px dotted #BDCEDA;
-        width: 100%;
-        border-bottom: 1px dotted #BDCEDA;
-        height: 30px;
-    }
-
-    .container #fareoutput {
-        padding-bottom: 8px;
     }
 
     .graph {
@@ -114,19 +64,57 @@ html, body {
         width: 100%;
         margin: 0 auto;
         height: 200px;
-        margin-top: 25px;
+        margin-top: 20px;
     }
 
-    /* vertical bars code*/
+    /* ------------- vertical bars------------ code*/
     .cases {
         border-top: 1px dotted #BDCEDA;
         border-bottom: 1px dotted #BDCEDA;
-        width: 100%;
+        height: 25px;
+        font-size: .8em;
+        margin-top: 15px;
+        color: #5A5A5A;
+    }
+
+    .scale {
+        width: 90%;
+    }
+
+    #personscale {
+        float: right;
+        display: block;
+        margin: 0;
+        height: 20px;
+    }
+
+    #personscale img {
+        width: 20%;
+    }
+
+    #casesoutput {
+        margin: 0;
+        width: 70%
+    }
+
+    #casesoutput p {
+        width: 36%;
+    }
+
+    #casesoutput img {
+        width: 3%;
+        padding-left: 1px;
+        text-align: left;
+    }
+
+    #scale img {
+        width: 3%;
+        padding-left: 1px;
     }
 
     .visual.graph {
         border: 1px dotted #BDCEDA;
-        width: 102%;
+        width: 99%;
         text-align: center;
         align-items: flex-end;
     }
@@ -136,41 +124,63 @@ html, body {
         display: flex;
         align-items: flex-end;
         height: 100%;
+        width: 65%;
+    }
+
+    .vertical.bars img {
+        width: 25%;
+        position: relative;
+        top: -125px;
+        display: block;
     }
 
     #stock1, #stock2, #stock3 {
-        width: 25%;
-        background-color: #BDCEDA;
+        background-color: black;
+        margin-left: 9px;
+        color: red;
+        width: 90%;
+        text-align: center;
+        background-color: #5A5A5A;
     }
 
     #stock1 {
         height: 100px;
+        transition: 1s;
     }
 
     #stock2 {
         height: 28px;
+        transition: 1s;
     }
 
     #stock3 {
         height: 80px;
+        transition: 1s;
     }
+
+    #stock span {}
 
     .horizontal.bars {
         float: right;
-        width: 33%;
-        border-left: 1px solid #BDCEDA;
+        width: 30%;
+        border-left: 1px dotted #5A5A5A;
         height: 100%;
+        color: #5A5A5A;
     }
 
     #airfare1, #airfare2, #airfare3, #airfare4, #airfare5 {
-        background-color: #BDCEDA;
+        background-color: black;
         height: 25px;
         margin-top: 5px;
         float: right;
+        color: red;
+        text-align: right;
+        font-style: normal;
+        background-color: #5A5A5A;
     }
 
     #airfare1 {
-        width: 96px;
+        width: 90px;
     }
 
     #airfare2 {
@@ -178,15 +188,15 @@ html, body {
     }
 
     #airfare3 {
-        width: 70px;
+        width: 85px;
     }
 
     #airfare4 {
-        width: 70px;
+        width: 85px;
     }
 
     #airfare5 {
-        width: 70px;
+        width: 85px;
     }
 
     /* To be Deleted?
@@ -257,8 +267,9 @@ html, body {
         overflow-x: scroll;
         width: 100%;
         margin: 0 auto;
-        height: 200px;
         margin-top: 25px;
+        background-color: white;
+        border-left: 1px dotted #BDCEDA;
     }
 
     .logos {
