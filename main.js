@@ -8,6 +8,22 @@ $("body").on("click", "svg rect", function (e) {
 	const fare = $(this_rect).attr("mydata:fare");
 	const cases = $(this_rect).attr("mydata:cases");
 
+	//change scale//
+	if (cases >= 1 && cases <= 10) {
+		$("#personscale").text("x1");
+	} else if (cases >= 11 && cases <= 100) {
+		$("#personscale").text("X10+");
+	} else if (cases >= 101 && cases <= 1000) {
+		$("#personscale").text("x100+");
+	} else if (cases >= 1001 && cases <= 10000) {
+		$("#personscale").text("x1000+");
+	} else if (cases >= 10001 && cases <= 10000) {
+		$("#personscale").text("x10000+");
+	} else if (100001 >= cases <= 1000000) {
+		$("#personscale").text("x100000+");
+	}
+	console.log(cases)
+
 	$("rect").removeClass("active")
 	$(this_rect).addClass("active");
 
@@ -16,6 +32,11 @@ $("body").on("click", "svg rect", function (e) {
 	$("#casesoutput span").text(cases);
 	console.log(stock)
 
+	//navigation via buttons//
+
+	//change Viewbox//
+	//shape = document.getElementsByTagName("svg")[0];
+	//shape.setAttribute("viewBox", "-180 -10 1077.88 407.69");
 
 	//navigation via buttons//
 
@@ -38,12 +59,14 @@ $("body").on("click", "svg rect", function (e) {
 
 	var person = document.getElementById("person1");
 
-
 	for (let i = 1; i < 10; i++) {
 
 		var outPerson = person.cloneNode(true)
 		$("#casesoutput").append(outPerson);
 	}
+
+
+
 
 
 });
