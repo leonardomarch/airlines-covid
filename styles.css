@@ -45,7 +45,7 @@ html, body {
 
     svg {
         left: 0px;
-        transform: scale(2);
+        transform: scale(1.5);
     }
 
     .text {
@@ -53,6 +53,7 @@ html, body {
         width: 90%;
         line-height: 1.3;
         color: white;
+        display: inline-block;
     }
 
     .container #stockoutput {
@@ -60,11 +61,41 @@ html, body {
     }
 
     .graph {
-        overflow-x: scroll;
+        overflow: hidden;
         width: 100%;
         margin: 0 auto;
         height: 200px;
-        margin-top: 20px;
+    }
+
+    .calendar {
+        color: white;
+        display: block;
+    }
+
+    .calendar p {
+        float: left;
+        padding-left: 8px;
+        color: #5A5A5A;
+    }
+
+    .date.chosen {
+        border-top: 1px dotted #5A5A5A;
+        border-bottom: 1px dotted #5A5A5A;
+        height: 55px;
+        color: #5A5A5A;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .date.chosen span {
+        font-weight: lighter;
+        font-size: 3em;
+    }
+
+    .february .march {
+        float: left;
+        display: block;
+        width: 100%
     }
 
     /* ------------- vertical bars------------ code*/
@@ -120,6 +151,7 @@ html, body {
         width: 99%;
         text-align: center;
         align-items: flex-end;
+        overflow: hidden;
     }
 
     .vertical.bars {

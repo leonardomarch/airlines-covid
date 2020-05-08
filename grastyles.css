@@ -17,8 +17,8 @@
 }
 
 .st4 {
-    fill: none;
-    stroke: #DFDFDF;
+    fill: red;
+    stroke: red;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-miterlimit: 10;
@@ -53,7 +53,7 @@ rect.active {
 }
 
 .st6.color {
-    fill: red;
+    fill: white;
     stroke-miterlimit: 3;
     width: 2px;
     height: 2px;
