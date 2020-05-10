@@ -1,3 +1,53 @@
+function getData(entry, property) { // This is a function for retrieving info from json that we get from Google Sheets. Thank you, TC for this one!
+	property = property.replace(/[^A-Za-z0-9]+/, "").toLowerCase(); //puts things in lower case and removes non-alphanumeric characters
+	const item = entry[`gsx$${property}`];
+	if (item.$t) {
+		return item.$t;
+	}
+	return item;
+}
+
+
+url = "https://spreadsheets.google.com/feeds/list/11wEkIEQvgr3slnlOHbtGBbzPY7M18q0NkPvNMTJYn1Q/1/public/values?alt=json" //url for airline data//
+$(".calendar.month").on("change", "select",
+	function (e) {
+		user_month = $(this).val() //working!//
+
+		$(".calendar.day").on("change", "select",
+			function (e) {
+				user_day = $(this).val() //working!//
+
+				user_date = user_month + " " + user_day
+				console.log(user_date)
+
+				let data;
+				fetch(url) //jquery function that gets a url
+					.then(r => r.json())
+					.then(d => {
+						data = d.feed.entry; //data is an array
+					})
+					.then(() => {
+						const date_data = data.filter(row => getData(row, 'date') === user_date); // identifies the row based on user date
+						date_data.forEach(date => cases = (getData(date, 'cases'))) //captures the 'cases' code from that row
+						date_data.forEach(date => nyc_la = (getData(date, 'la'))) //captures the 'cases' code from that row
+						date_data.forEach(date => nyc_chicago = (getData(date, 'chicago'))) //captures the 'cases' code from that row
+						date_data.forEach(date => nyc_atlanta = (getData(date, 'atlanta'))) //captures the 'cases' code from that row
+						date_data.forEach(date => nyc_washington = (getData(date, 'washington'))) //captures the 'cases' code from that row
+						date_data.forEach(date => nyc_orlando = (getData(date, 'orlando'))) //captures the 'cases' code from that row
+						date_data.forEach(date => stock_aal = (getData(date, 'aal'))) //captures the 'cases' code from that row
+						date_data.forEach(date => stock_alk = (getData(date, 'alk'))) //captures the 'cases' code from that row
+						date_data.forEach(date => stock_dal = (getData(date, 'dal'))) //captures the 'cases' code from that row
+						date_data.forEach(date => stock_luv = (getData(date, 'luv'))) //captures the 'cases' code from that row
+						date_data.forEach(date => stock_ual = (getData(date, 'ual'))) //captures the 'cases' code from that row
+						//////VARIABLE NAMES ARE RIGHT HERE ^//////i.e. console.log(nyc_la) will give you the price for that date///
+						data_row = [cases, nyc_la, nyc_chicago, nyc_atlanta, nyc_washington, nyc_orlando, stock_aal, stock_alk, stock_dal, stock_luv, stock_ual]
+						console.log(data_row)
+					});
+
+			});
+	});
+
+
 //navigation via graph//
 
 $("body").on("click", "svg rect", function (e) {
@@ -5,8 +55,11 @@ $("body").on("click", "svg rect", function (e) {
 	const this_rect = e.target;
 
 	const stock = $(this_rect).attr("mydata:stock");
+	console.log(stock)
 	const fare = $(this_rect).attr("mydata:fare");
+	console.log(fare)
 	const cases = $(this_rect).attr("mydata:cases");
+	console.log(cases)
 
 
 
@@ -101,7 +154,7 @@ $("body").on("click", ".calendar", function (e) {
 
 
 
-
+*/
 
 //change Viewbox//
 //shape = document.getElementsByTagName("svg")[0];
