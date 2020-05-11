@@ -175,11 +175,11 @@ html, body {
     }
 
     .vertical.bars p {
-        color: red;
-        height: 100%;
+        color: #5A5A5A;
+        height: 20px;
         align-self: end;
         padding-left: 6px;
-        display: run-in;
+        position: absolute;
     }
 
     .vertical.bars img {
@@ -189,8 +189,12 @@ html, body {
         display: block;
     }
 
-    #stock1, #stock2, #stock3 {
-        background-color: black;
+    .vertical.bars span {
+        font-size: .70em;
+        color: white;
+    }
+
+    #stockaal, #stockalk, #stockdal, #stockluv, #stockual {
         margin-left: 9px;
         color: red;
         width: 90%;
@@ -198,17 +202,27 @@ html, body {
         background-color: #5A5A5A;
     }
 
-    #stock1 {
+    #stockaal {
         height: 100px;
         transition: 1s;
     }
 
-    #stock2 {
+    #stockalk {
         height: 28px;
         transition: 1s;
     }
 
-    #stock3 {
+    #stockdal {
+        height: 80px;
+        transition: 1s;
+    }
+
+    #stockdla {
+        height: 80px;
+        transition: 1s;
+    }
+
+    #stockual {
         height: 80px;
         transition: 1s;
     }
@@ -221,34 +235,34 @@ html, body {
         color: #5A5A5A;
     }
 
-    #airfare1, #airfare2, #airfare3, #airfare4, #airfare5 {
-        background-color: black;
+    #airfarela, #airfarechi, #airfareatl, #airfarewash, #airfareorl {
         height: 25px;
         margin-top: 5px;
         float: right;
-        color: red;
+        color: white;
         text-align: right;
         font-style: normal;
         background-color: #5A5A5A;
+        font-size: .8em;
     }
 
-    #airfare1 {
+    #airfarela {
         width: 90px;
     }
 
-    #airfare2 {
+    #airfarechi {
         width: 90px;
     }
 
-    #airfare3 {
+    #airfareatl {
         width: 85px;
     }
 
-    #airfare4 {
+    #airfarewash {
         width: 85px;
     }
 
-    #airfare5 {
+    #airfareorl {
         width: 85px;
     }
 

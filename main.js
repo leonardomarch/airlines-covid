@@ -42,7 +42,46 @@ $(".calendar.month").on("change", "select",
 						//////VARIABLE NAMES ARE RIGHT HERE ^//////i.e. console.log(nyc_la) will give you the price for that date///
 						data_row = [cases, nyc_la, nyc_chicago, nyc_atlanta, nyc_washington, nyc_orlando, stock_aal, stock_alk, stock_dal, stock_luv, stock_ual]
 						console.log(data_row)
+						console.log(date_data)
+
+						$(".date.chosen span").text(date_data);
+
+
+						//stocks//
+						var stockAAL = document.getElementById("stockaal");
+						stockAAL.style.height = stock_aal + "px";
+
+						var stockALK = document.getElementById("stockalk");
+						stockALK.style.height = stock_alk + "px";
+
+						var stockDAL = document.getElementById("stockdal");
+						stockDAL.style.height = stock_dal + "px";
+
+						var stockLUV = document.getElementById("stockluv");
+						stockLUV.style.height = stock_luv + "px";
+
+						var stockUAL = document.getElementById("stockual");
+						stockUAL.style.height = stock_ual + "px";
+
+						//fares//
+
+						var farela = document.getElementById("airfarecla");
+						farela.style.width = nyc_la + "px";
+
+						var fareCHI = document.getElementById("airfarechi");
+						fareCHI.style.width = nyc_chicago + "px";
+
+						var fareATL = document.getElementById("airfareatl");
+						fareATL.style.width = nyc_atlanta + "px";
+
+						var fareWAS = document.getElementById("airfarewash");
+						fareWAS.style.width = nyc_washington + "px";
+
+						var fareORL = document.getElementById("airfareorl");
+						fareORL.style.width = nyc_atlanta + "px";
+
 					});
+				console.log(nyc_chicago)
 
 			});
 	});
@@ -116,47 +155,11 @@ $("body").on("click", "svg rect", function (e) {
 
 //navigation via buttons//
 
-$("body").on("click", ".calendar", function (e) {
-	const this_day = e.target;
-
-	const stock1 = $(this_day).attr("mydata:stock");
-	const fare1 = $(this_day).attr("mydata:fare");
-	const cases1 = $(this_day).attr("mydata:cases");
 
 
 
-	$("#casesoutput span").text(cases1);
-
-	//change height of stock prices//
-
-	var newHeight = document.getElementById("stock1");
-	newHeight.style.height = stock1 + "px";
-
-	var newHeight = document.getElementById("stock2");
-	newHeight.style.height = fare1 + "px";
-
-	var newHeight = document.getElementById("stock3");
-	newHeight.style.height = cases1 + "px";
-
-	//Visualization of cases//
-
-	var person = document.getElementById("person1");
-
-	for (let i = 1; i < 10; i++) {
-
-		var outPerson = person.cloneNode(true)
-		$("#casesoutput").append(outPerson);
-	}
-
-	console.log(this_day)
-
-	$("#stock1 span").text(stock2);
-
-});
 
 
-
-*/
 
 //change Viewbox//
 //shape = document.getElementsByTagName("svg")[0];
