@@ -70,6 +70,8 @@ $("body").on("click", ".calendar", function (e) {
 	const fare1 = $(this_day).attr("mydata:fare");
 	const cases1 = $(this_day).attr("mydata:cases");
 
+
+
 	$("#casesoutput span").text(cases1);
 
 	//change height of stock prices//
