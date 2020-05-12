@@ -27,7 +27,7 @@ html, body {
 
     .container {
         max-width: 400px;
-        min-width: 320px;
+        min-width: 340px;
         width: 90%;
         margin: 0 auto;
     }
@@ -100,7 +100,7 @@ html, body {
 
     .date.chosen span {
         font-weight: lighter;
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     .february .march {
@@ -165,274 +165,195 @@ html, body {
         overflow: hidden;
     }
 
-    .vertical.bars {
+    .stock.bars {
         float: left;
         display: flex;
         align-items: flex-end;
         height: 100%;
-        width: 65%;
+        width: 40%;
         height: 100%;
     }
 
-    .vertical.bars p {
-        color: #5A5A5A;
+    .stock.bars p {
+        color: red;
         height: 20px;
         align-self: end;
         padding-left: 6px;
         position: absolute;
+        text-align: center;
     }
 
-    .vertical.bars img {
-        width: 25%;
-        position: relative;
-        top: -125px;
-        display: block;
-    }
-
-    .vertical.bars span {
-        font-size: .70em;
+    .stock.bars span {
+        font-size: .50em;
         color: white;
+        transform: rotate(90deg);
     }
 
     #stockaal, #stockalk, #stockdal, #stockluv, #stockual {
-        margin-left: 9px;
+        margin-left: 0px;
         color: red;
-        width: 90%;
+        width: 13%;
         text-align: center;
         background-color: #5A5A5A;
-    }
-
-    #stockaal {
-        height: 100px;
+        margin: 0px 3px 0px 3px;
+        height: 10px;
         transition: 1s;
     }
 
-    #stockalk {
-        height: 28px;
-        transition: 1s;
-    }
-
-    #stockdal {
-        height: 80px;
-        transition: 1s;
-    }
-
-    #stockdla {
-        height: 80px;
-        transition: 1s;
-    }
-
-    #stockual {
-        height: 80px;
-        transition: 1s;
-    }
-
-    .horizontal.bars {
+    .fare.bars {
         float: right;
-        width: 30%;
+        width: 60%;
         border-left: 1px dotted #5A5A5A;
         height: 100%;
         color: #5A5A5A;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .fare.bars p {
+        color: red;
+        text-align: center;
+        position: absolute;
+        text-align: center;
+        align-self: end;
+    }
+
+    .fare.bars span {
+        vertical-align: middle;
+        font-size: .8em;
     }
 
     #airfarela, #airfarechi, #airfareatl, #airfarewash, #airfareorl {
-        height: 25px;
+        height: 10px;
         margin-top: 5px;
         float: right;
         color: white;
-        text-align: right;
-        font-style: normal;
-        background-color: #5A5A5A;
-        font-size: .8em;
-    }
-
-    #airfarela {
-        width: 90px;
-    }
-
-    #airfarechi {
-        width: 90px;
-    }
-
-    #airfareatl {
-        width: 85px;
-    }
-
-    #airfarewash {
-        width: 85px;
-    }
-
-    #airfareorl {
-        width: 85px;
-    }
-
-    /* To be Deleted?
-    .slider {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 100%;
-        height: 5px;
-        background: #d3d3d3;
-        outline: none;
-        opacity: 0.7;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
-    }
-
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 9px;
-        height: 9px;
-        border-radius: 5px;
-        background: green;
-        cursor: pointer;
-    }
-
-    #yesterday, #today, #tomorrow {
-        padding: 10px;
-        margin: 5px;
-        background-color: #BDCEDA
-    }
-
-    .slidecontainer {
-        height: 20px;
-        width: 100%;
-        margin: auto 0;
-        display: none;
-    }
-
-    Slider CSS code courtey of w3schools.com */
-}
-
-/* Smartphones (landscape) ---------- */
-@media screen and (min-width: 481px) {
-    .container {
-        max-width: 500px;
-        min-width: 320px;
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    .container img {
-        width: 110%;
-        margin: 0 auto;
-    }
-
-    svg {
-        transform: scale(1.5);
-        left: 0px;
-    }
-
-    .text {
-        font-size: .85em;
-        line-height: 1.4;
-    }
-
-    /* Interactive: Graph and output */
-    .graph {
-        overflow-x: scroll;
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 25px;
-        background-color: white;
-        border-left: 1px dotted #BDCEDA;
-    }
-
-    .logos {
-        height: 35px;
-        border-top: 1px dotted #BDCEDA;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        margin: 0 auto;
-    }
-
-    .logos img {
-        width: 15%;
-        display: inline;
-    }
-
-    .logos p {}
-
-    .container.output {
-        margin: 0 auto;
-        border-top: 1px dotted #BDCEDA;
-        margin-top: 10px;
-        height: 35px;
-        width: 100%;
-    }
-
-    .container p {
-        font-size: .85em;
-        display: inline;
-        padding-left: 1px;
-        padding-right: 1px;
-        vertical-align: middle;
-        line-height: 35px;
-    }
-
-    .container span {
-        width: 82px;
-        display: inline-block;
-        font-size: 1.35em;
-        font-weight: bolder;
-        text-align: left;
-        vertical-align: middle;
-        line-height: 30px;
-    }
-
-    .container #stockoutput {
-        margin-left: 7px;
-    }
-
-    .moreinfo {
-        border-top: 1px dotted #BDCEDA;
-        width: 100%;
-        border-bottom: 1px dotted #BDCEDA;
-        height: 35px;
-    }
-
-    .container #fareoutput {
-        padding-bottom: 12px;
-    }
-
-    /* Date Navigation */
-    .datepicker {
-        margin: 0 auto;
-        width: 100%;
-        padding-top: 10px;
         text-align: center;
-        margin-bottom: 20px;
-    }
-
-    button {
-        height: 30px;
+        font-style: normal;
+        background-color: #2e2e2e;
         font-size: .8em;
-        background-color: #BDCEDA;
+        transition: 1s;
+        margin: 1px 2px 1px 3px;
     }
-}
 
-/* Tablets, iPads (portrait and landscape) ---------- */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    /* styles */
-}
+    .legend span {
+        color: white;
+        font-size: .5em;
+    }
 
-/* Tablets, iPads (portrait) ---------- */
-@media screen and (min-width: 768px) {
-    /* styles */
-}
+    /* Smartphones (landscape) ---------- */
+    @media screen and (min-width: 481px) {
+        .container {
+            max-width: 500px;
+            min-width: 320px;
+            width: 70%;
+            margin: 0 auto;
+        }
 
-/* Tablets, iPads (landscape) ---------- */
-@media screen and (min-width: 1024px) {
-    /* styles */
-}
+        .container img {
+            width: 110%;
+            margin: 0 auto;
+        }
 
-/* Desktops and laptops ---------- */
-@media screen and (min-width: 1224px) {
-    /* styles */
-}
+        svg {
+            transform: scale(1.5);
+            left: 0px;
+        }
 
-/* Large screens ---------- */
-@media screen and (min-width: 1824px) {
-    /* styles */
-}
+        .text {
+            font-size: .85em;
+            line-height: 1.4;
+        }
+
+        /* Interactive: Graph and output */
+        .graph {
+            overflow-x: scroll;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 25px;
+            background-color: white;
+            border-left: 1px dotted #BDCEDA;
+        }
+
+        .container.output {
+            margin: 0 auto;
+            border-top: 1px dotted #BDCEDA;
+            margin-top: 10px;
+            height: 35px;
+            width: 100%;
+        }
+
+        .container p {
+            font-size: .85em;
+            display: inline;
+            padding-left: 1px;
+            padding-right: 1px;
+            vertical-align: middle;
+            line-height: 35px;
+        }
+
+        .container span {
+            width: 82px;
+            display: inline-block;
+            font-size: 1.35em;
+            font-weight: bolder;
+            text-align: left;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+
+        .container #stockoutput {
+            margin-left: 7px;
+        }
+
+        .moreinfo {
+            border-top: 1px dotted #BDCEDA;
+            width: 100%;
+            border-bottom: 1px dotted #BDCEDA;
+            height: 35px;
+        }
+
+        .container #fareoutput {
+            padding-bottom: 12px;
+        }
+
+        /* Date Navigation */
+        .datepicker {
+            margin: 0 auto;
+            width: 100%;
+            padding-top: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            height: 30px;
+            font-size: .8em;
+            background-color: #BDCEDA;
+        }
+    }
+
+    /* Tablets, iPads (portrait and landscape) ---------- */
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        /* styles */
+    }
+
+    /* Tablets, iPads (portrait) ---------- */
+    @media screen and (min-width: 768px) {
+        /* styles */
+    }
+
+    /* Tablets, iPads (landscape) ---------- */
+    @media screen and (min-width: 1024px) {
+        /* styles */
+    }
+
+    /* Desktops and laptops ---------- */
+    @media screen and (min-width: 1224px) {
+        /* styles */
+    }
+
+    /* Large screens ---------- */
+    @media screen and (min-width: 1824px) {
+        /* styles */
+    }

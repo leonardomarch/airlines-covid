@@ -44,7 +44,7 @@ $(".calendar.month").on("change", "select",
 						console.log(data_row)
 						console.log(date_data)
 
-						$(".date.chosen span").text(date_data);
+						$(".date.chosen span").text(user_date + ", " + 2020);
 
 
 						//stocks//
@@ -65,20 +65,48 @@ $(".calendar.month").on("change", "select",
 
 						//fares//
 
-						var farela = document.getElementById("airfarecla");
-						farela.style.width = nyc_la + "px";
+						var farela = document.getElementById("airfarela");
+						farela.style.height = nyc_la + "px";
 
 						var fareCHI = document.getElementById("airfarechi");
-						fareCHI.style.width = nyc_chicago + "px";
+						fareCHI.style.height = nyc_chicago + "px";
 
 						var fareATL = document.getElementById("airfareatl");
-						fareATL.style.width = nyc_atlanta + "px";
+						fareATL.style.height = nyc_atlanta + "px";
 
 						var fareWAS = document.getElementById("airfarewash");
-						fareWAS.style.width = nyc_washington + "px";
+						fareWAS.style.height = nyc_washington + "px";
 
 						var fareORL = document.getElementById("airfareorl");
-						fareORL.style.width = nyc_atlanta + "px";
+						fareORL.style.height = nyc_atlanta + "px";
+
+
+
+						//change scale values//
+						if (cases >= 1 && cases <= 10) {
+							$("#personscale").text("x1");
+						} else if (cases >= 11 && cases <= 100) {
+							$("#personscale").text("X10+");
+						} else if (cases >= 101 && cases <= 1000) {
+							$("#personscale").text("x100+");
+						} else if (cases >= 1001 && cases <= 10000) {
+							$("#personscale").text("x1000+");
+						} else if (cases >= 10001 && cases <= 10000) {
+							$("#personscale").text("x10000+");
+						} else if (100001 >= cases <= 1000000) {
+							$("#personscale").text("x100000+");
+						}
+
+						//Visualization of cases//
+
+						var person = document.getElementById("person1");
+
+						for (let i = 1; i < 10; i++) {
+
+							var outPerson = person.cloneNode(true)
+							$("#casesoutput").append(outPerson);
+						}
+
 
 					});
 				console.log(nyc_chicago)
