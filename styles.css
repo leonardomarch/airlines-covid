@@ -437,6 +437,10 @@ h1, h5 {
         display: contents;
     }
 
+    #airfarela p, #airfarechi p, #airfareatl p, #airfarewash p, #airfareorl p {
+        font-size: 10px;
+    }
+
     /* Tablets, iPads (landscape) ---------- */
     @media screen and (min-width: 700px) {
         .container {
@@ -516,5 +520,21 @@ h1, h5 {
             padding-left: 5px;
             vertical-align: middle;
             margin-bottom: 0px;
+        }
+
+        .cases {
+            border-top: 1px dotted #BDCEDA;
+            border-bottom: 1px dotted #BDCEDA;
+            height: 25px;
+            font-size: .8em;
+            margin-top: 15px;
+            color: #5A5A5A;
+            padding: 4px 2px;
+        }
+
+        .cases span {
+            color: red;
+            font-weight: bolder;
+            padding: 4px 2px;
         }
     }
