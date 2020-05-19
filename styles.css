@@ -124,6 +124,7 @@ h1, h5 {
     .date.chosen span {
         font-weight: lighter;
         font-size: 2.5em;
+        width: 100%;
     }
 
     .borders {
@@ -148,6 +149,7 @@ h1, h5 {
         color: red;
         font-weight: bolder;
         padding: 4px 2px;
+        display: contents;
     }
 
     .flights {
@@ -201,7 +203,9 @@ h1, h5 {
         color: white;
         transform: rotate(90deg);
         display: block;
-        margin-top: -25px
+        margin-top: -25px;
+        width: 100%;
+        text-align: center;
     }
 
     #stockaal, #stockalk, #stockdal, #stockluv, #stockual {
@@ -249,6 +253,8 @@ h1, h5 {
     .fare.bars span {
         vertical-align: middle;
         font-size: .8em;
+        text-align: center;
+        width: 100%;
     }
 
     #airfarela, #airfarechi, #airfareatl, #airfarewash, #airfareorl {
@@ -356,7 +362,6 @@ h1, h5 {
         font-weight: bolder;
         text-align: left;
         vertical-align: middle;
-        line-height: 30px;
     }
 
     .container #fareoutput {
@@ -400,19 +405,18 @@ h1, h5 {
     .cases {
         border-top: 1px dotted #BDCEDA;
         border-bottom: 1px dotted #BDCEDA;
-        height: 35px;
+        height: 25px;
         font-size: .8em;
         margin-top: 15px;
         color: #5A5A5A;
-        padding: 8px 2px;
-        display: flex;
+        padding: 4px 2px;
     }
 
     .cases span {
         color: red;
         font-weight: bolder;
-        display: flex;
         padding: 4px 2px;
+        display: contents;
     }
 
     .date.chosen {
@@ -429,6 +433,7 @@ h1, h5 {
         font-size: 2em;
         margin-top: 10px;
         text-align: center;
+        width: 100%;
     }
 
     .calendar {
@@ -441,6 +446,7 @@ h1, h5 {
 
     #airfarela p, #airfarechi p, #airfareatl p, #airfarewash p, #airfareorl p {
         font-size: 10px;
+        text-align: center;
     }
 
     /* Tablets, iPads (landscape) ---------- */
@@ -479,6 +485,7 @@ h1, h5 {
             width: 75%;
             margin-top: 10px;
             text-align: center;
+            width: 100%;
         }
 
         .calendar {
@@ -540,5 +547,6 @@ h1, h5 {
             color: red;
             font-weight: bolder;
             padding: 4px 2px;
+            display: contents;
         }
     }

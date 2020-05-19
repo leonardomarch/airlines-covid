@@ -51,7 +51,7 @@ $(".calendar.month").on("change", "select",
 
 						//----flights bar----//
 
-						var flightsDec = Number(comm_flights) / 101977;
+						var flightsDec = (comm_flights) / 101977;
 						var flightsTotalPercent = parseFloat(flightsDec) * 100;
 
 						var flightsTotal = document.getElementById("flights");
