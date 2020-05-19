@@ -17,7 +17,7 @@ $(".calendar.month").on("change", "select",
 			function (e) {
 				user_day = $(this).val() //working!//
 
-				user_date = user_month + " " + user_day
+				const user_date = user_month + " " + user_day
 				console.log(user_date)
 
 				let data;
@@ -27,27 +27,41 @@ $(".calendar.month").on("change", "select",
 						data = d.feed.entry; //data is an array
 					})
 					.then(() => {
-						const date_data = data.filter(row => getData(row, 'date') === user_date); // identifies the row based on user date
-						date_data.forEach(date => cases = (getData(date, 'cases'))) //captures the 'cases' code from that row
-						date_data.forEach(date => nyc_la = (getData(date, 'la'))) //captures the 'cases' code from that row
-						date_data.forEach(date => nyc_chicago = (getData(date, 'chicago'))) //captures the 'cases' code from that row
-						date_data.forEach(date => nyc_atlanta = (getData(date, 'atlanta'))) //captures the 'cases' code from that row
-						date_data.forEach(date => nyc_washington = (getData(date, 'washington'))) //captures the 'cases' code from that row
-						date_data.forEach(date => nyc_orlando = (getData(date, 'orlando'))) //captures the 'cases' code from that row
-						date_data.forEach(date => stock_aal = (getData(date, 'aal'))) //captures the 'cases' code from that row
-						date_data.forEach(date => stock_alk = (getData(date, 'alk'))) //captures the 'cases' code from that row
-						date_data.forEach(date => stock_dal = (getData(date, 'dal'))) //captures the 'cases' code from that row
-						date_data.forEach(date => stock_luv = (getData(date, 'luv'))) //captures the 'cases' code from that row
-						date_data.forEach(date => stock_ual = (getData(date, 'ual'))) //captures the 'cases' code from that row
+						const date_data = data.find(row => getData(row, 'date') === user_date); // identifies the row based on user date
+						const cases = getData(date_data, 'cases');
+						const nyc_la = getData(date_data, 'la'); //captures the 'cases' code from that row
+						const nyc_chicago = getData(date_data, 'chicago');
+						const nyc_atlanta = getData(date_data, 'atlanta');
+						const nyc_washington = getData(date_data, 'washington');
+						const nyc_orlando = getData(date_data, 'orlando');
+						const stock_aal = getData(date_data, 'aal');
+						const stock_alk = getData(date_data, 'alk');
+						const stock_dal = getData(date_data, 'dal');
+						const stock_luv = getData(date_data, 'luv');
+						const stock_ual = getData(date_data, 'ual');
+						const comm_flights = getData(date_data, 'flights');
+
 						//////VARIABLE NAMES ARE RIGHT HERE ^//////i.e. console.log(nyc_la) will give you the price for that date///
-						data_row = [cases, nyc_la, nyc_chicago, nyc_atlanta, nyc_washington, nyc_orlando, stock_aal, stock_alk, stock_dal, stock_luv, stock_ual]
-						console.log(data_row)
-						console.log(date_data)
+						data_row = [cases, nyc_la, nyc_chicago, nyc_atlanta, nyc_washington, nyc_orlando, stock_aal, stock_alk, stock_dal, stock_luv, stock_ual, flights]
+
+						console.log(data_row);
+						console.log(date_data);
 
 						$(".date.chosen span").text(user_date + ", " + 2020);
 
+						//----flights bar----//
 
-						//stocks//
+						var flightsDec = (parseInt(comm_flights) / 101977);
+						var flightsTotalPercent = (parseInt(flightsDec) * 100);
+
+						var flightsTotal = document.getElementById("flights");
+						flightsTotal.style.width = flightsTotalPercent + "%";
+
+						console.log(comm_flights);
+						console.log(flightsDec);
+						console.log(flightsTotalPercent);
+
+						//stocks bars heights//
 						var stockAAL = document.getElementById("stockaal");
 						stockAAL.style.height = stock_aal + "px";
 
@@ -63,7 +77,7 @@ $(".calendar.month").on("change", "select",
 						var stockUAL = document.getElementById("stockual");
 						stockUAL.style.height = stock_ual + "px";
 
-						//fares//
+						//fares bars heights//
 
 						var farela = document.getElementById("airfarela");
 						farela.style.height = nyc_la + "px";
@@ -78,119 +92,66 @@ $(".calendar.month").on("change", "select",
 						fareWAS.style.height = nyc_washington + "px";
 
 						var fareORL = document.getElementById("airfareorl");
-						fareORL.style.height = nyc_atlanta + "px";
+						fareORL.style.height = nyc_orlando + "px";
+
+						$(".cases span").text(cases);
+
+						//----------------cases analysis----------------//
 
 
+						//setting data on top of bars---stocks//
+						$("#stockaal p").text(stock_aal);
+						$("#stockalk p").text(stock_alk);
+						$("#stockdal p").text(stock_dal);
+						$("#stockluv p").text(stock_luv);
+						$("#stockual p").text(stock_ual);
 
-						//change scale values//
-						if (cases >= 1 && cases <= 10) {
-							$("#personscale").text("x1");
-						} else if (cases >= 11 && cases <= 100) {
-							$("#personscale").text("X10+");
-						} else if (cases >= 101 && cases <= 1000) {
-							$("#personscale").text("x100+");
-						} else if (cases >= 1001 && cases <= 10000) {
-							$("#personscale").text("x1000+");
-						} else if (cases >= 10001 && cases <= 10000) {
-							$("#personscale").text("x10000+");
-						} else if (100001 >= cases <= 1000000) {
-							$("#personscale").text("x100000+");
-						}
-
-						//Visualization of cases//
-
-						var person = document.getElementById("person1");
-
-						for (let i = 1; i < 10; i++) {
-
-							var outPerson = person.cloneNode(true)
-							$("#casesoutput").append(outPerson);
-						}
-
+						//setting data on top of bars---fares//
+						$("#airfarela p").text(nyc_la);
+						$("#airfarechi p").text(nyc_chicago);
+						$("#airfareatl p").text(nyc_atlanta);
+						$("#airfarewash p").text(nyc_washington);
+						$("#airfareorl p").text(nyc_orlando);
 
 					});
-				console.log(nyc_chicago)
 
 			});
+
 	});
 
 
-//navigation via graph//
-
-$("body").on("click", "svg rect", function (e) {
+//----code to get date ---//
+$("body").on("click", ".navigation button", function (e) {
 	e.preventDefault();
-	const this_rect = e.target;
+	const cliqued = e.target;
+	const cliquedId = cliqued.id;
+	var dateValue = $(e.target).val();
+	dateValue = 0
+	var valorTotal = 0
 
-	const stock = $(this_rect).attr("mydata:stock");
-	console.log(stock)
-	const fare = $(this_rect).attr("mydata:fare");
-	console.log(fare)
-	const cases = $(this_rect).attr("mydata:cases");
-	console.log(cases)
+	var valorAcumulado = dateValue + valorAcumulado;
+	console.log(valorTotal)
+	console.log(dateValue)
+});
 
+$(".calendar.month").on("change", "select", function (e) {
+	e.preventDefault();
+	var monthChosen = $(e.target).val();
+	$(".calendar.day").on("change", "select", function (e) {
+		var dayChosen = $(e.target).val();
+		console.log(dayChosen)
+		console.log(monthChosen)
 
-
-	//change scale values//
-	if (cases >= 1 && cases <= 10) {
-		$("#personscale").text("x1");
-	} else if (cases >= 11 && cases <= 100) {
-		$("#personscale").text("X10+");
-	} else if (cases >= 101 && cases <= 1000) {
-		$("#personscale").text("x100+");
-	} else if (cases >= 1001 && cases <= 10000) {
-		$("#personscale").text("x1000+");
-	} else if (cases >= 10001 && cases <= 10000) {
-		$("#personscale").text("x10000+");
-	} else if (100001 >= cases <= 1000000) {
-		$("#personscale").text("x100000+");
-	}
-
-	//change color of data points on graph//
-	$("rect").removeClass("active")
-	$(this_rect).addClass("active");
-
-	$("#fareoutput span").text(fare);
-	$("#stockoutput span").text(stock);
-	$("#casesoutput span").text(cases);
-
-
-	//change height of stock prices//
-
-	var newHeight = document.getElementById("stock1");
-	newHeight.style.height = stock + "px";
-
-	var newHeight = document.getElementById("stock2");
-	newHeight.style.height = fare + "px";
-
-	var newHeight = document.getElementById("stock3");
-	newHeight.style.height = cases + "px";
-
-	$("#stock2 span").text(fare);
-	$("#stock1 span").text(stock);
-	$("#stock3 span").text(cases);
-
-	//Visualization of cases//
-
-	var person = document.getElementById("person1");
-
-	for (let i = 1; i < 10; i++) {
-
-		var outPerson = person.cloneNode(true)
-		$("#casesoutput").append(outPerson);
-	}
+		var dateChosen = monthChosen + " " + dayChosen;
+		console.log(dateChosen)
+	});
 
 });
 
-//navigation via buttons//
 
 
 
 
 
 
-
-//change Viewbox//
-//shape = document.getElementsByTagName("svg")[0];
-//shape.setAttribute("viewBox", "-180 -10 1077.88 407.69");
-
-//navigation via buttons//
+//trtr//

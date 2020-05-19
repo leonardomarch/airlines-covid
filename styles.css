@@ -12,6 +12,40 @@ html, body {
     background-color: black;
 }
 
+button {
+    height: 50px;
+    width: 50px;
+    background-color: : red;
+    border: 1px solid;
+    margin-left: 5px;
+}
+
+h6 {
+    text-align: left;
+    font-size: .6em;
+    color: red;
+}
+
+.bottom {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    padding-top: 0px;
+    height: 20px;
+    color: white;
+}
+
+.bottom p {
+    vertical-align: middle;
+}
+
+.bottom img {
+    width: 30px;
+    padding-left: 5px;
+    vertical-align: middle;
+    margin-bottom: 30px;
+}
+
 /* Smartphones (portrait and landscape) ---------- */
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
@@ -23,6 +57,12 @@ html, body {
 
     h1, h5 {
         color: white;
+    }
+
+    h4 {
+        margin: 10px 0px 10px 0px;
+        padding: 0px 10px 0px 0px;
+        color: #5A5A5A;
     }
 
     .container {
@@ -81,6 +121,7 @@ html, body {
         margin: 0 auto;
         margin-top: 5%;
         margin-bottom: 5%;
+        float: left;
     }
 
     .calendar p {
@@ -103,13 +144,14 @@ html, body {
         font-size: 2.5em;
     }
 
-    .february .march {
-        float: left;
-        display: block;
-        width: 100%
+    .borders {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px dotted #5A5A5A;
+        z-index: 0;
+        display: inline-block;
     }
 
-    /* ------------- vertical bars------------ code*/
     .cases {
         border-top: 1px dotted #BDCEDA;
         border-bottom: 1px dotted #BDCEDA;
@@ -117,44 +159,21 @@ html, body {
         font-size: .8em;
         margin-top: 15px;
         color: #5A5A5A;
+        padding: 4px 2px;
     }
 
-    .scale {
-        width: 90%;
+    .cases span {
+        color: red;
+        font-weight: bolder;
+        padding: 4px 2px;
     }
 
-    #personscale {
+    .flights {
         float: right;
-        display: block;
-        margin: 0;
+        width: 100%;
         height: 20px;
-        position: relative;
-        top: -18px
-    }
-
-    #personscale img {
-        width: 16%;
-    }
-
-    #casesoutput {
-        margin: 0;
-        width: 70%
-    }
-
-    #casesoutput p {
-        width: 36%;
-    }
-
-    #casesoutput img {
-        width: 4%;
-        padding-left: 1px;
-        text-align: left;
-        display: inline-flex;
-    }
-
-    #scale img {
-        width: 3%;
-        padding-left: 1px;
+        background-color: red;
+        transition: 1s;
     }
 
     .visual.graph {
@@ -163,14 +182,25 @@ html, body {
         text-align: center;
         align-items: flex-end;
         overflow: hidden;
+        min-height: 300px;
     }
 
+    /* analisis de casos*/
+    .daily.change {
+        width: 40px;
+        height: 40px;
+        color: red;
+        border: 1px dotted red;
+        border-radius: 40px;
+    }
+
+    /*----stock data ----*/
     .stock.bars {
         float: left;
         display: flex;
         align-items: flex-end;
         height: 100%;
-        width: 40%;
+        width: 44%;
         height: 100%;
     }
 
@@ -181,6 +211,7 @@ html, body {
         padding-left: 6px;
         position: absolute;
         text-align: center;
+        font-weight: bolder;
     }
 
     .stock.bars span {
@@ -192,7 +223,7 @@ html, body {
     #stockaal, #stockalk, #stockdal, #stockluv, #stockual {
         margin-left: 0px;
         color: red;
-        width: 13%;
+        width: 15%;
         text-align: center;
         background-color: #5A5A5A;
         margin: 0px 3px 0px 3px;
@@ -200,9 +231,20 @@ html, body {
         transition: 1s;
     }
 
+    #stockaal p, #stockalk p, #stockdal p, #stockluv p, #stockual p {
+        font-size: 8.5px;
+        position: relative;
+        top: -25px;
+        color: white;
+        left: 0px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    /*----fare data ----*/
     .fare.bars {
         float: right;
-        width: 60%;
+        width: 56%;
         border-left: 1px dotted #5A5A5A;
         height: 100%;
         color: #5A5A5A;
@@ -216,6 +258,8 @@ html, body {
         position: absolute;
         text-align: center;
         align-self: end;
+        font-weight: bolder;
+        padding-left: 5px;
     }
 
     .fare.bars span {
@@ -234,6 +278,17 @@ html, body {
         font-size: .8em;
         transition: 1s;
         margin: 1px 2px 1px 3px;
+        width: 16%
+    }
+
+    #airfarela p, #airfarechi p, #airfareatl p, #airfarewash p, #airfareorl p {
+        font-size: 8.5px;
+        position: relative;
+        top: -25px;
+        color: white;
+        left: 0px;
+        text-align: center;
+        padding: 0px;
     }
 
     .legend span {
@@ -241,7 +296,6 @@ html, body {
         font-size: .5em;
     }
 
-    /* Smartphones (landscape) ---------- */
     @media screen and (min-width: 481px) {
         .container {
             max-width: 500px;
