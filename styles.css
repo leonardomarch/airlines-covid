@@ -26,28 +26,12 @@ h6 {
     color: red;
 }
 
-.bottom {
-    width: 100%;
-    display: block;
-    margin-top: 10px;
-    padding-top: 0px;
-    height: 20px;
+h1, h5 {
     color: white;
 }
 
-.bottom p {
-    vertical-align: middle;
-}
-
-.bottom img {
-    width: 30px;
-    padding-left: 5px;
-    vertical-align: middle;
-    margin-bottom: 30px;
-}
-
 /* Smartphones (portrait and landscape) ---------- */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) {
 
     /*Lucas stuff*/
     select {
@@ -60,7 +44,7 @@ h6 {
     }
 
     h4 {
-        margin: 10px 0px 10px 0px;
+        margin: 20px 0px 10px 0px;
         padding: 0px 10px 0px 0px;
         color: #5A5A5A;
     }
@@ -74,14 +58,6 @@ h6 {
 
     .container img {
         width: 100%
-    }
-
-    .datepicker {
-        margin: 0 auto;
-        width: 100%;
-        padding-top: 10px;
-        text-align: center;
-        margin-bottom: 20px;
     }
 
     button {
@@ -117,17 +93,19 @@ h6 {
     .calendar {
         color: white;
         text-align: center;
-        display: block;
+        display: contents;
         margin: 0 auto;
         margin-top: 5%;
         margin-bottom: 5%;
         float: left;
+        display: contents;
     }
 
     .calendar p {
         float: left;
         padding-left: 8px;
         color: #5A5A5A;
+        display: contents;
     }
 
     .date.chosen {
@@ -137,6 +115,10 @@ h6 {
         color: #5A5A5A;
         text-align: center;
         margin-top: 10px;
+    }
+
+    .extra {
+        margin-top: 30px;
     }
 
     .date.chosen span {
@@ -218,6 +200,8 @@ h6 {
         font-size: .50em;
         color: white;
         transform: rotate(90deg);
+        display: block;
+        margin-top: -25px
     }
 
     #stockaal, #stockalk, #stockdal, #stockluv, #stockual {
@@ -235,7 +219,7 @@ h6 {
         font-size: 8.5px;
         position: relative;
         top: -25px;
-        color: white;
+        color: red;
         left: 0px;
         text-align: center;
         padding: 0px;
@@ -285,7 +269,7 @@ h6 {
         font-size: 8.5px;
         position: relative;
         top: -25px;
-        color: white;
+        color: red;
         left: 0px;
         text-align: center;
         padding: 0px;
@@ -294,120 +278,243 @@ h6 {
     .legend span {
         color: white;
         font-size: .5em;
+        display: contents;
+        line-height: .5em;
     }
 
-    @media screen and (min-width: 481px) {
+    .bottom {
+        width: 100%;
+        display: block;
+        margin-top: 50px;
+        padding-top: 0px;
+        height: 20px;
+        color: white;
+        border-top: 1px dotted #5A5A5A;
+        font-size: .8em;
+    }
+
+    .bottom p {
+        vertical-align: middle;
+    }
+
+    .bottom img {
+        width: 30px;
+        padding-left: 5px;
+        vertical-align: middle;
+        margin-bottom: 30px;
+    }
+}
+
+/* Tablets, iPads (portrait) ---------- */
+@media screen and (min-width: 481px) {
+    select {
+        color: white;
+        background: gray;
+    }
+
+    h1, h5 {
+        color: white;
+    }
+
+    h4 {
+        margin: 20px 0px 10px 0px;
+        padding: 0px 10px 0px 0px;
+        color: #5A5A5A;
+    }
+
+    .container {
+        max-width: 500px;
+        min-width: 320px;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .container img {
+        width: 110%;
+        margin: 0 auto;
+    }
+
+    .text {
+        font-size: .85em;
+        line-height: 1.4;
+    }
+
+    /* Interactive: Graph and output */
+    .container p {
+        font-size: .85em;
+        display: inline;
+        padding-left: 1px;
+        padding-right: 1px;
+        vertical-align: middle;
+        line-height: 35px;
+    }
+
+    .container span {
+        width: 82px;
+        display: inline-block;
+        font-size: 1.35em;
+        font-weight: bolder;
+        text-align: left;
+        vertical-align: middle;
+        line-height: 30px;
+    }
+
+    .container #fareoutput {
+        padding-bottom: 12px;
+    }
+
+    .container {
+        max-width: 480px;
+        min-width: 340px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container img {
+        width: 100%
+    }
+
+    .text {
+        font-size: .8em;
+        width: 90%;
+        line-height: 1.3;
+        color: white;
+        display: inline-block;
+    }
+
+    .stock.bars span {
+        font-size: .50em;
+        color: white;
+        transform: none;
+        display: block;
+        margin-top: -25px
+    }
+
+    .legend span {
+        color: white;
+        font-size: .5em;
+        display: contents;
+        line-height: .8;
+    }
+
+    .cases {
+        border-top: 1px dotted #BDCEDA;
+        border-bottom: 1px dotted #BDCEDA;
+        height: 35px;
+        font-size: .8em;
+        margin-top: 15px;
+        color: #5A5A5A;
+        padding: 8px 2px;
+        display: flex;
+    }
+
+    .cases span {
+        color: red;
+        font-weight: bolder;
+        padding: 4px 2px;
+        display: flex;
+    }
+
+    .date.chosen {
+        border-top: 1px dotted #5A5A5A;
+        border-bottom: 1px dotted #5A5A5A;
+        height: 55px;
+        color: #5A5A5A;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .date.chosen span {
+        font-weight: lighter;
+        font-size: 2.5em;
+    }
+
+    .calendar {
+        display: contents;
+    }
+
+    .calendar p {
+        display: contents;
+    }
+
+    /* Tablets, iPads (landscape) ---------- */
+    @media screen and (min-width: 700px) {
         .container {
-            max-width: 500px;
-            min-width: 320px;
+            max-width: 600px;
+            min-width: 340px;
             width: 70%;
             margin: 0 auto;
         }
 
         .container img {
-            width: 110%;
-            margin: 0 auto;
+            width: 100%
         }
 
-        svg {
-            transform: scale(1.5);
-            left: 0px;
+        .stock.bars span {
+            font-size: .50em;
+            color: white;
+            transform: none;
+            display: block;
+            margin-top: -25px
         }
 
-        .text {
-            font-size: .85em;
-            line-height: 1.4;
-        }
-
-        /* Interactive: Graph and output */
-        .graph {
-            overflow-x: scroll;
-            width: 100%;
-            margin: 0 auto;
-            margin-top: 25px;
-            background-color: white;
-            border-left: 1px dotted #BDCEDA;
-        }
-
-        .container.output {
-            margin: 0 auto;
-            border-top: 1px dotted #BDCEDA;
-            margin-top: 10px;
-            height: 35px;
-            width: 100%;
-        }
-
-        .container p {
-            font-size: .85em;
-            display: inline;
-            padding-left: 1px;
-            padding-right: 1px;
-            vertical-align: middle;
-            line-height: 35px;
-        }
-
-        .container span {
-            width: 82px;
-            display: inline-block;
-            font-size: 1.35em;
-            font-weight: bolder;
-            text-align: left;
-            vertical-align: middle;
-            line-height: 30px;
-        }
-
-        .container #stockoutput {
-            margin-left: 7px;
-        }
-
-        .moreinfo {
-            border-top: 1px dotted #BDCEDA;
-            width: 100%;
-            border-bottom: 1px dotted #BDCEDA;
-            height: 35px;
-        }
-
-        .container #fareoutput {
-            padding-bottom: 12px;
-        }
-
-        /* Date Navigation */
-        .datepicker {
-            margin: 0 auto;
-            width: 100%;
-            padding-top: 10px;
+        .date.chosen {
+            border-top: 1px dotted #5A5A5A;
+            border-bottom: 1px dotted #5A5A5A;
+            height: 55px;
+            color: #5A5A5A;
             text-align: center;
-            margin-bottom: 20px;
+            margin-top: 10px;
         }
 
-        button {
-            height: 30px;
-            font-size: .8em;
-            background-color: #BDCEDA;
+        .date.chosen span {
+            font-weight: lighter;
+            font-size: 2.5em;
+            width: 75%;
         }
-    }
 
-    /* Tablets, iPads (portrait and landscape) ---------- */
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-        /* styles */
-    }
+        .calendar {
+            color: white;
+            text-align: center;
+            display: contents;
+            margin: 0 auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            float: left;
+            border-bottom: 1px dotted #5A5A5A;
+            width: 100%;
+            margin-bottom: 30px;
+        }
 
-    /* Tablets, iPads (portrait) ---------- */
-    @media screen and (min-width: 768px) {
-        /* styles */
-    }
+        .calendar p {
+            float: left;
+            color: #5A5A5A;
+            display: contents;
+            margin-right: 5px;
+            vertical-align: middle;
+            height: 40px;
+        }
 
-    /* Tablets, iPads (landscape) ---------- */
-    @media screen and (min-width: 1024px) {
-        /* styles */
-    }
+        .bottom {
+            width: 100%;
+            display: block;
+            margin-top: 40px;
+            padding-top: 0px;
+            height: 20px;
+            color: white;
+            border-top: 1px dotted #5A5A5A;
+            margin-bottom: 40px;
+        }
 
-    /* Desktops and laptops ---------- */
-    @media screen and (min-width: 1224px) {
-        /* styles */
-    }
+        .bottom p {
+            vertical-align: middle;
+            height: 20px;
+        }
 
-    /* Large screens ---------- */
-    @media screen and (min-width: 1824px) {
-        /* styles */
+        .bottom img {
+            width: 30px;
+            padding-left: 5px;
+            vertical-align: middle;
+            margin-bottom: 0px;
+        }
     }
